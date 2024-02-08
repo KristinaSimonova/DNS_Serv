@@ -1,0 +1,9 @@
+# config file
+
+upstream_server: 8.8.8.8
+
+upstream_port: 8080
+
+blacklist: amazon.com google.com facebook.com yandex.ru instagram.com
+
+response: Access_Denied
