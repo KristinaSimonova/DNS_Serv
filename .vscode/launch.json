@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/kristinasimonova/Desktop/DNS_Serv",
+      "program": "/Users/kristinasimonova/Desktop/DNS_Serv/build/Debug/outDebug"
+    }
+  ]
+}

@@ -34,7 +34,7 @@ static int	get_socket(void)
 	return (socketfd);
 }
 
-static void	refused_send(int soc, char *buffer, int recive_b, struct sockaddr_in *client)
+static void	refused_send(int sockfd, char *buffer, int recive_b, struct sockaddr_in *client)
 {
 	t_dns_header 				*dns_h;
 	socklen_t 					clnt_adrs_len;
@@ -47,7 +47,7 @@ static void	refused_send(int soc, char *buffer, int recive_b, struct sockaddr_in
 	dns_h->rcode = 5;
 	dns_h->ans_count = 0;
 
-	if ((send_byte = sendto(soc,  buffer, recive_b, 0, (struct sockaddr *)client, clnt_adrs_len)) == -1)
+	if ((send_byte = sendto(sockfd,  buffer, recive_b, 0, (struct sockaddr *)client, clnt_adrs_len)) == -1)
 	{
 		printf("sendto\n");
 		exit(1);
